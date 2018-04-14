@@ -1,1 +1,28 @@
-theme: jekyll-theme-cayman
+markdown: kramdown
+rouge: pygments
+kramdown:
+  input: GFM
+permalink: /posts/:title.html
+excerpt_separator: "<!-- more -->"
+
+github: latelee
+author: "李迟"
+email: li@latelee.org
+name: "迟思堂工作室"
+url: https://latelee.github.io/
+domain: https://latelee.github.io/
+all_categories: [
+["linux", "linux","/posts/linux.html"],
+["mylife", "生活杂记","/posts/mylife.html"],
+["about", "关于","/about.html"]
+]
+paginate: 1
+paginate_path: "posts/page:num"
+timezone: Asia/Shanghai
+
+collections:
+  docs:
+    output: true
+
+gems:
+ - jekyll-paginate
