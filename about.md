@@ -5,7 +5,7 @@ title: "关于：About"
 欢迎访问我的个人主页
 
 ### About Me
-![alt text](mypicture.jpg ) 
+![alt text](/assets/mypicture.jpg ) 
 
 #### 个人简介
 姓名: 李迟(Late Lee)  
