@@ -14,7 +14,7 @@ domain: https://latelee.github.io/
 all_categories: [
 ["linux", "linux","/posts/linux.html"],
 ["mylife", "生活杂记","/posts/mylife.html"],
-["about", "关于","/about.html"]
+["about", "关于","/about.html"],
 ["resum", "简历","/resume.html"]
 ]
 paginate: 1
