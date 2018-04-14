@@ -14,7 +14,7 @@ title: "关于：About"
 工作: 嵌入式Linux，docker
 
 #### 个人链接
-主页：<https://www.latelee.org>  
+主页：<http://www.latelee.org>  
 CSDN: <https://blog.csdn.net/subfate>  
 GitHub: <https://github.com/latelee>  
 
