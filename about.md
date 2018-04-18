@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "关于：About"
+title: "关于我"
 ---
 
 ![alt text](/assets/mypicture.jpg ) 
@@ -26,3 +26,4 @@ QQ：2378410766
 
 ### 捐赠
 如果觉得本站内容帮阁下有帮助，不妨小小赞助一下作者：  
+![donate](/assets/latelee_pay_312.png ) 

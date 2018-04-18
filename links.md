@@ -8,7 +8,7 @@ tags: [链接,友情,交换]
 本站链接：
 
 >站名：李迟的个人主页 
->网址： https://www.latelee.org
+>网址： https://latelee.github.io
 
 留言格式参考本站链接，谢谢!
 
