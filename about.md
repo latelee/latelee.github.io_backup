@@ -15,10 +15,10 @@ title: "关于我"
 个人主页：<http://www.latelee.org>  
 CSDN: <https://blog.csdn.net/subfate>  
 GitHub: <https://github.com/latelee>  
-淘宝小店：https://shop243991695.taobao.com/  
+淘宝小店：<https://shop243991695.taobao.com/>  
 
 ### 联系方式
-Email: li@latelee.org
+Email: li#latelee.org (请将#换成@)
 QQ：2378410766  
 微信：  
 广西嵌入式linux交流群(同城群)：301233245  
