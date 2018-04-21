@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Lubuntu16.4.3定制教程
 keywords: lubuntu, livecd
@@ -553,7 +553,7 @@ md5sum：4ac0996167214e0b541be7016be19220
 
 关于本文任何问题或建议，欢迎反馈给我：li@latelee.org。  
 本教程花费大量时间，如果觉得有帮助，欢迎捐赠作者：  
-![](latelee_pay.png)
+![](https://latelee.github.io/assets/latelee_pay.png)
 
 # 6、免责声明
 本文开源于此，旨在让自己（或他人）更深入地研究lubuntu(以及linux)系统内部结构及原理。lubuntu、ubuntu、linux的商标(和版权)归属各自所属组织/公司，笔者无意亦不愿侵犯。
