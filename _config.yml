@@ -21,13 +21,14 @@ all_categories: [
 ]
 paginate: 10
 paginate_path: "index_:num"
+gems: [jekyll-paginate]
 #paginate_path: "posts/page:num"
+#gems:
+# - jekyll-paginate
+
 timezone: Asia/Shanghai
 
 collections:
   docs:
     output: true
 
-#gems:
-# - jekyll-paginate
-gems: [jekyll-paginate]
