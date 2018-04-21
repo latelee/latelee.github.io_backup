@@ -19,13 +19,15 @@ all_categories: [
 ["about", "关于","/about.html"],
 ["resum", "简历","/resume.html"]
 ]
-paginate: 1
-paginate_path: "posts/page:num"
+paginate: 10
+paginate_path: "index_:num"
+#paginate_path: "posts/page:num"
 timezone: Asia/Shanghai
 
 collections:
   docs:
     output: true
 
-gems:
- - jekyll-paginate
+#gems:
+# - jekyll-paginate
+gems: [jekyll-paginate]
