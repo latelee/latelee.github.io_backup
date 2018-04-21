@@ -1,14 +1,27 @@
-github的个人博客
+个人博客模板--基于Jekyll+Github构建。
 ================
-#### 李迟在github.io上的博客，地址为：https://latelee.github.io/  
 
-#### 创建步骤
-* 申请注册github账号，在仓库内建立名为<主页名称>.github.io的仓库，如latelee.github.io。注意，主页名与github账号名完全一致，才能使用xxx.github.io的形式，否则无法使用。
-* 克隆别人现成的模板到这个仓库（或者fork别人的模板仓库）。github主页使用Jekyll，网上有很多模板。
-* 根据实际情况修改模板文件。
-* 提交到自己的github仓库，稍等片刻，即可在https://<主页名称>.github.io/上看到博客内容。  
-* 注意，文章必须位于_posts目录，且必须以“年-月-日-文章名.md”命名。  
-* 文章为markdonw格式，里面必须按要求编写。
+#### 博客地址
+http://www.panxw.com, 支持PC与智能机访问。  
 
-#### 模板
-感谢panxw提供的模板：https://github.com/panxw  
+#### 使用本项目作为博客模板，仅需如下几步：
+1,首先Fork或Download一份本项目代码。  
+2,修改_config.yaml及about.md文件，以变更个人信息。  
+3,修改_include目录下相关文件，以配置网站统计(analytics.html)，网友评论(comment.html)，右侧栏目(categories.html)等。  
+4,修改CNAME文件，以绑定自己的域名。  
+5,删除_posts下文章，换成你自己的。  
+6,最后，push到你自己的博客Repo~  
+
+#### 本项目使用了
+1,百度统计的网站统计服务，官网：http://tongji.baidu.com  
+2,不蒜子的页面浏览统计服务，官网：http://busuanzi.ibruce.info  
+3,GitHub Issues作网友评论服务，官网：https://imsun.net/posts/gitment-introduction/  
+4,Google 的Adsense广告，官网：https://www.google.com/adsense/login/zh_CN  
+如需查看或管理网站统计、评论或广告，请自行注册帐号并修改_includes目录下相关文件。  
+
+#### 联系作者
+QQ：85902258  
+邮箱：email(winfirm#163.com)  
+Github：https://github.com/panxw  
+
+**^_^*随喜Star一下本项目吧，谢谢~  

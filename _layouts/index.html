@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="{{ page.title }} - {{ site.name }} - 作者:{{ site.author }}"/>
+    <meta name="description" content="{{ page.description }} - {{ site.name }}" />
     <title>{{ page.title }} - {{ site.name }}</title>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet"/>
@@ -24,12 +24,10 @@
     <script src="/js/jquery-1.11.0.js"> </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/tongji.js"></script>
   </head>
   
   <body>
-   <div >
-            {% include footer.html %} 
-          </div>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -63,39 +61,55 @@
       <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-          {{ content }}
+          <!-- Navi -->
+          <div class="post_frame">
+            <div class="post_navi">
+              <a href="/">首页</a>&nbsp;>&nbsp;
+              <span class="post_navi_span">列表</span>
+            </div>
+            <div style="padding:10px">
+              {{ content }}
+            </div>
+          </div>
         </div>
         <!-- Blog Sidebar Widgets Column -->
         <div class="col-md-4">
-          <!-- Blog Categories Well -->
+          <!-- Side Widget Well -->
           <div class="well">
             <h4>
-              栏目分类
+              推荐链接
             </h4>
-            <div class="row">
-              {% include categories.html %} 
+			      <div class="row">
+            {% include recommend_link.html %} 
             </div>
-            <!-- /.row -->
           </div>
+
           <!-- Side Widget Well -->
           <div class="well-ad">
-            {% include adsense.html %} 
+            {% include adsense_336x280.html %} 
           </div>
-		  <!-- Blog Recent Well -->
+          
+          <!-- Blog Recent Well -->
           <div class="well">
             <h4>
               最新文章
             </h4>
-			<div class="row">
-              {% include recent_posts.html %} 
-			</div>
+            <div class="row">
+                    {% include recent_posts.html %} 
+            </div>
           </div>		  
-		  <!-- Blog Links Well -->
+
+		     <!-- Blog Links Well -->
           <div class="well">
             <h4>
               友情链接
+			  <div class="linkme">
+				<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=w7SqraWqsa6DsrLtoKyu" target="_blank">
+					<span class="linkme_span">交换链接</span>
+				</a>
+			  </div>
             </h4>
-            {% include links.html %} 
+            {% include friendlinks.html %} 
           </div>
         </div>
       </div>
@@ -103,9 +117,6 @@
 
       <!-- Footer -->
       <footer>
-		<div style="text-align:center">
-			{% include adsense_728x90.html %} 
-		</div>
         <div class="row">
           <div class="col-lg-12">
             {% include copyright.html %} 
@@ -113,9 +124,9 @@
           <!-- /.col-lg-12 -->
         </div>
         <!-- /.row -->
-
       </footer>
     </div>
     <!-- /.container -->
+    {% include spider.html %} 
   </body>
 </html>
