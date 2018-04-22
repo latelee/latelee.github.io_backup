@@ -27,9 +27,9 @@ gems: [jekyll-paginate]
 #gems:
 # - jekyll-paginate
 
-index_layout: "index.html"
-category_layout: "_layouts/category.html"
-tag_layout: "_layouts/tag.html"
+#index_layout: "index.html"
+#category_layout: "_layouts/category.html"
+#tag_layout: "_layouts/tag.html"
 
 timezone: Asia/Shanghai
 
