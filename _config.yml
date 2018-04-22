@@ -19,7 +19,7 @@ all_categories: [
 ["about", "关于","/about.html"],
 ["resum", "简历","/resume.html"]
 ]
-paginate: 1
+paginate: 2
 paginate_path: "posts/page:num"
 timezone: Asia/Shanghai
 

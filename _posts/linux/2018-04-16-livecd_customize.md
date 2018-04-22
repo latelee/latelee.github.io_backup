@@ -16,7 +16,7 @@ tags : [linux]
 本文所述“启动系统”、“重启系统”、“ISO启动”等，都是指“启动iso，进入livecd环境”。  
 本文假定读者能自由切换sudo和root，并能自由切换“/”和“\”。  
 本文工程项目仓库地址：[https://github.com/cststudio/lubuntucd](https://github.com/cststudio/lubuntucd) ，下文将其为“工程”或“工程仓库”。  
-
+<!-- more -->
 # 1、环境搭建
 制作iso镜像，需要使用一台linux系统，可以是物理机，也可以是虚拟机，只要保证安装有相应的工具即可。本文使用的系统是12核至强处理器，64GB内存的ubuntu 16.04 64bit。CPU核心数越多，制作ISO镜像越快（本文所用系统制作ISO耗时大约1分钟左右）。  
 就制作过程而言，需要使用的工具安装步骤如下： 
