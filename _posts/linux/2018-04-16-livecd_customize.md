@@ -9,14 +9,12 @@ tags : [linux]
 <center><h1>Lubuntu16.4.3定制教程</h1></center>
 <center>迟思堂工作室 李迟(li@latelee.org)</center>
   
-  
 本文是对lubuntu-16.04.3-desktop-amd64.iso进行定制文档，最终输出一个可以烧写到U盘并能启动的ISO镜像文件。本文要求读者对linux有一定掌握程度，比如：知道用户权限（root权限）、知道如何使用apt-get install安装软件，知道shell。本文注重的是制作的方法，另外有做好的定制脚本文件，具体参考工程仓库内文件。工程仓库里的图标、配置文件显示的字符串可能与本文有出入，最终以读者自行判断的为准。  
 如无特殊说明：  
 本文提到的命令，都是用root执行的。  
 本文所述“启动系统”、“重启系统”、“ISO启动”等，都是指“启动iso，进入livecd环境”。  
 本文假定读者能自由切换sudo和root，并能自由切换“/”和“\”。  
-本文工程项目仓库地址：[https://github.com/cststudio/lubuntucd](https://github.com/cststudio/lubuntucd) ，下文将其为“工程”或“工程仓库”。  
-<!-- more -->
+本文工程项目仓库地址：[https://github.com/cststudio/lubuntucd](https://github.com/cststudio/lubuntucd) ，下文将其为“工程”或“工程仓库”。<!-- more -->  
 # 1、环境搭建
 制作iso镜像，需要使用一台linux系统，可以是物理机，也可以是虚拟机，只要保证安装有相应的工具即可。本文使用的系统是12核至强处理器，64GB内存的ubuntu 16.04 64bit。CPU核心数越多，制作ISO镜像越快（本文所用系统制作ISO耗时大约1分钟左右）。  
 就制作过程而言，需要使用的工具安装步骤如下： 
