@@ -82,7 +82,7 @@ squashfs-root/usr/share/lubuntu/wallpapers
 如果在主机上查看/etc/alternatives/text.plymouth，该文件却链接到/usr/share/plymouth/themes/xubuntu-text/xubuntu-text.plymouth。  
 因为本文是使用ubuntu来定制lubuntu，所以会出现这种情况。如果主机也是lubuntu，则不会这样。但是，如果不小心改错了ISO里面的文件，还是会影响主机的使用的。  
 下图是默认的lubuntu桌面：   
-![](https://latelee.github.io/assets/2018/04/p_lubuntu_org_desktop.png)
+![](https://latelee.github.io/assets/linux/lubuntu/p_lubuntu_org_desktop.png)
 
 ## 4.1 桌面背景图片
 ### 4.1.1 背景图片
@@ -99,7 +99,7 @@ squashfs-root/usr/share/lubuntu/wallpapers
 将自己喜欢的图片（最终保持分辨率），放到此目录，并修改为1604-lubuntu-logo.png。原来的图片可以删除可重命名。  
 注：squashfs-root \usr\share\lubuntu\images 目录下的1604-logout-banner.png是登出显示的logo图片。  
 定制效果如下图所示：  
-![](https://latelee.github.io/assets/2018/04/p_background.png)
+![](https://latelee.github.io/assets/linux/lubuntu/p_background.png)
 
 
 ## 4.2 系统关机显示的图标
@@ -180,11 +180,11 @@ zh_TW.tr文件中，将
 ```
 效果如下（红框部分所示）：  
 英文界面：  
-![](https://latelee.github.io/assets/2018/04/p_bootlogo_en.png)  </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_bootlogo_en.png)  </br>
 简体中文界面：  
-![](https://latelee.github.io/assets/2018/04/p_bootlogo_zh.png)  </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_bootlogo_zh.png)  </br>
 繁体中文界面：  
-![](https://latelee.github.io/assets/2018/04/p_bootlogo_tw.png)  </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_bootlogo_tw.png)  </br>
 从图中看到，繁体中文效果不佳，原因未知，个人猜测和文字长度或者编码格式有关。  
 另外在测试中发现，即使是简体中文，如果字符串长度太长，也会显示不正常。
 
@@ -202,7 +202,7 @@ scrollback=100
 ```
 修改的是fontname这一行。  
 说明：这是修改GUI的终端配置（字体选择和字体大小）。效果如下图红框所示。  
-![](https://latelee.github.io/assets/2018/04/p_lxterminal.png)  </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_lxterminal.png)  </br>
 说明：默认为Monospace 10，现改为Monospace 11。  
 
 ## 4.5 修改鼠标样式
@@ -226,7 +226,7 @@ lubuntu的桌面图标配置文件目录是：squashfs-root/usr/share/applicatio
 安装我的！系统！ RELEASE
 ```
 也可以修改为其它想显示的字符。重新制作ISO，启动ISO后，桌面出现效果如下：  
-![](https://latelee.github.io/assets/2018/04/p_desktop_install.png)  </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_desktop_install.png)  </br>
 说明：通过修改配置文件，可以定制桌面图标显示的文字。  
 
 ## 4.7 放置图标快捷到桌面
@@ -241,7 +241,7 @@ cp /usr/share/applications/lxterminal.desktop .
 chmod +x *
 ```
 效果如下：  
-![](https://latelee.github.io/assets/2018/04/p_desktop_icon.png)  </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_desktop_icon.png)  </br>
 
 说明：此方式适用于默认lubuntu用户的情况。（注意和以下方式有区别，如果使用自添加用户的话，则本节设置方法无效）  
 知识点：  
@@ -271,7 +271,7 @@ Exec=pcmanfm /
 内容注释参考前面，不再赘述。  
 
 效果如下图所示：  
-![](https://latelee.github.io/assets/2018/04/p_desktop_home.png)  </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_desktop_home.png)  </br>
 （注：左为中文，右为英文，可以看到两者图标间距不同，猜测是字符编码原因，也可能是笔者截图导致的视觉误差。）
 ## 4.9 新加锁屏
 lubuntu默认使用lxlock作为锁屏工具。这里使用另一种锁屏方案：xlock。xlock官网为：[http://www.sillycycle.com/xlockmore.html](http://www.sillycycle.com/xlockmore.html)，源码下载地址为：[http://www.sillycycle.com/xlock/](http://www.sillycycle.com/xlock/)。  
@@ -301,7 +301,7 @@ apt-get install -y rxvt-unicode
 cp /lib64/ld-linux-x86-64.so.2 /lib/
 ```
 重启制作ISO，启动，在桌面上会看到锁屏图标，双击，然后输入2次相同的密码，就会锁屏（此时屏幕是黑色的）。按任意键后，在出现的界面中输入刚才的密码，即能解锁。效果图如下：  
-![](https://latelee.github.io/assets/2018/04/p_xlock.png) </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_xlock.png) </br>
 
 
 ## 4.10 启动菜单添加新图标
@@ -310,7 +310,7 @@ cp /lib64/ld-linux-x86-64.so.2 /lib/
 Categories=GTK;System;Utility;
 ```
 效果图如下（左侧中文，右侧英文）：  
-![](https://latelee.github.io/assets/2018/04/p_startmenu_xlock.png)  </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_startmenu_xlock.png)  </br>
 注意，菜单中显示的图标上的文字，由.desktop文件的Name决定。  
 
 ## 4.11 启动菜单添加新分类
@@ -330,7 +330,7 @@ Name=MyVim
 GenericName=My Text Editor
 ```
 重新制作ISO，启动后，效果图如下（左侧英文，右侧中文）  
-![](https://latelee.github.io/assets/2018/04/p_startmenu_pro.png) </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_startmenu_pro.png) </br>
 
 总结：不管是新安装的软件还是系统已有的软件，如果要显示在桌面或菜单，都需要添加(或修改).desktop文件。放到桌面上，则要将.desktop文件拷贝到Desktop目录，菜单分类则需要将Categories修改为合适的字段。至于显示的名称，则由该文件的Name字段确定。参考其它的.desktop文件，进行学习了解。  
 
@@ -348,7 +348,7 @@ adduser latelee admin
 
 注：添加用户后，启动ISO时，会提示输入用户名密码，所以无法直接进入系统，是否需要此功能，三思而定。  
 登陆效果图如下：  
-![](https://latelee.github.io/assets/2018/04/p_newuser_latelee.png) </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_newuser_latelee.png) </br>
 在此前提下，创建桌面快捷方式：  
 创建文件：/home/latelee/Desktop/lxterminal.desktop。Desktop目录默认没有，需要自行创建。  
 内容如下：  
@@ -459,7 +459,7 @@ apt-get install -y language-pack-zh-hant language-pack-gnome-zh-hant
 apt-get install -y language-pack-en language-pack-gnome-en
 ```
 下面对比原版和定制版本的效果：  
-![](https://latelee.github.io/assets/2018/04/p_i18n.png) </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_i18n.png) </br>
 从图中看到，有部分已经进行了汉化，但有部分依然没有被汉化。根据网络为数不多的资料猜测，应该是语言包并没有全部翻译造成的。如果要完全汉化，只能通过修改语言包文件达到目的，虽然4.18小节讲述了语言文件的修改方法，但整体而言，语言包的翻译是一个大工程，已超过本文范围了，故不再深入讲解。  
 
 ## 4.18 语言文件修改
@@ -486,7 +486,7 @@ msgstr "--我的--使用 LibFM 版本 %s\n"
 msgfmt pcmanfm.po -o pcmanfm.mo
 ```
 将重新生成的pcmanfm.mo拷贝到原处，制作ISO，启动，选择简体中文。得到的效果图如下所示：  
-![](https://latelee.github.io/assets/2018/04/p_i18n2.png) </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_i18n2.png) </br>
 
 ## 4.19 添加拼音、五笔输入法
 安装fcitx拼音、五笔： 
@@ -501,9 +501,9 @@ add-apt-repository ppa:fcitx-team/stable
 经测试，不添加也可以正常安装。  
 
 输入法选择界面：  
-![](https://latelee.github.io/assets/2018/04/p_fcitx.png) </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_fcitx.png) </br>
 五笔输入界面：  
-![](https://latelee.github.io/assets/2018/04/p_fcitx2.png) </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_fcitx2.png) </br>
 fcitx拼音、五笔在中文环境才能显示出来，英文环境无法使用。  
 
 注：fcitx从源码安装十分麻烦，依赖库有十多个，详细参考以下文章：  
@@ -543,7 +543,7 @@ rm -rf $(find /etc -name "*dpkg*") $(find /etc -name "*apt*")
 
 # 5、最终定制效果及ISO下载
 定制效果图如下： 
-![](https://latelee.github.io/assets/2018/04/p_desktop_final.png) </br>
+![](https://latelee.github.io/assets/linux/lubuntu/p_desktop_final.png) </br>
 
 本工程定制的ISO镜像下载地址如下：  
 链接: [https://pan.baidu.com/s/1jJ7bRNo](https://pan.baidu.com/s/1jJ7bRNo) 密码: 5c1u  
