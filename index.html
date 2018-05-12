@@ -26,17 +26,13 @@ title: "迟思堂工作室"
 {% if paginator.total_pages > 1 %}
 <ul class="pagination">
 
-	{% if paginator.previous_page == 1%}
-  <li>
-    <a href="/">&laquo; Prev111</a>
-  </li>
-  {% if paginator.previous_page %}
+  {% if paginator.previous_page > 1 %}
   <li>
     <a href="/posts/page{{ paginator.previous_page }}/index.html">&laquo; Prev1</a>
   </li>
   {% else %}
   <li>
-    <span>&laquo; Prev</span>
+    <a href="/">&laquo; Prev111</a>
   </li>
   {% endif %}
 
