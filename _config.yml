@@ -19,7 +19,7 @@ all_categories: [
 #["resum", "简历","/resume.html"]
 ]
 paginate: 2
-paginate_path: "posts/page:num"
+paginate_path: "index_:num"
 timezone: Asia/Shanghai
 
 collections:
