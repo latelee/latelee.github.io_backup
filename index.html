@@ -25,14 +25,13 @@ title: "迟思堂工作室"
 <div style="margin:0px auto;text-align: center">
 {% if paginator.total_pages > 1 %}
 <ul class="pagination">
-
   {% if paginator.previous_page > 1 %}
   <li>
-    <a href="/posts/page{{ paginator.previous_page }}/index.html">&laquo; Prev1</a>
+    <a href="/posts/page{{ paginator.previous_page }}/index.html">&laquo; 上一页</a>
   </li>
   {% else %}
   <li>
-    <a href="/">&laquo; Prev111</a>
+    <a href="/">&laquo; 上一页</a>
   </li>
   {% endif %}
 
@@ -54,11 +53,11 @@ title: "迟思堂工作室"
 
   {% if paginator.next_page %}
    <li>
-    <a href="/posts/page{{ paginator.next_page }}/index.html">Next &raquo;</a>
+    <a href="/posts/page{{ paginator.next_page }}/index.html">下一页 &raquo;</a>
    </li>
   {% else %}
   <li>
-    <span>Next &raquo;</span>
+    <span>下一页 &raquo;</span>
   </li>
   {% endif %}
 </ul>
