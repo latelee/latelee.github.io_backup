@@ -21,6 +21,51 @@ title: "迟思堂工作室"
 {% endfor %}
 
 <!-- Pager indicator -->
+
+<div style="margin:0px auto;text-align: center">
+{% if paginator.total_pages > 1 %}
+<ul class="pagination">
+  {% if paginator.previous_page > 1 %}
+  <li>
+    <a href="/posts/page{{ paginator.previous_page }}/index.html">&laquo; 上一页</a>
+  </li>
+  {% else %}
+  <li>
+    <a href="/">&laquo; 上一页</a>
+  </li>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <li class="active">
+      <span>{{ page }}</span>
+    </li>
+    {% elsif page == 1 %}
+    <li>
+      <a href="/">{{ page }}</a>
+    </li>
+    {% else %}
+    <li>
+      <a href="/posts/page{{ page }}/index.html">{{ page }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+   <li>
+    <a href="/posts/page{{ paginator.next_page }}/index.html">下一页 &raquo;</a>
+   </li>
+  {% else %}
+  <li>
+    <span>下一页 &raquo;</span>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
+</div>
+
+<!-- Pager indicator -->
+<!-- 
 <ul class="pager">
   {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
   <li class="previous">
@@ -42,3 +87,4 @@ title: "迟思堂工作室"
   </li>
   {% endif %}
 </ul>
+-->
