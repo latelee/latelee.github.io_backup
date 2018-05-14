@@ -12,8 +12,8 @@ name: "李迟的个人主页"
 url: https://latelee.github.io/
 domain: https://latelee.github.io/
 all_categories: [
-["code", "程序","/posts/code.html"],
-["linux", "linux","/posts/linux.html"],
+["dailywork", "日常事务","/posts/dailywork.html"],
+["team", "团队管理","/posts/team.html"],
 ["network", "网络","/posts/network.html"],
 ["about", "关于","/about.html"],
 #["resum", "简历","/resume.html"]
