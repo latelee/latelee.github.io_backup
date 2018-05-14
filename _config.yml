@@ -14,7 +14,6 @@ domain: https://latelee.github.io/
 all_categories: [
 ["dailywork", "日常事务","/posts/dailywork.html"],
 ["team", "团队管理","/posts/team.html"],
-["network", "网络","/posts/network.html"],
 ["about", "关于","/about.html"],
 #["resum", "简历","/resume.html"]
 ]
