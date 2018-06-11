@@ -14,7 +14,6 @@ url: https://k.latelee.org
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://192.168.31.212:4000/" # the base hostname & protocol for your site
 
-domain:https://k.latelee.org
 all_categories: [
 ["dailywork", "日常事务","/posts/dailywork.html"],
 ["team", "团队管理","/posts/team.html"],
