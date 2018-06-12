@@ -9,10 +9,10 @@ github: latelee
 author: "李迟"
 email: li@latelee.org
 name: "李迟的个人主页"
-#url: https://k.latelee.org
+url: https://k.latelee.org
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://192.168.31.212:4000/" # the base hostname & protocol for your site
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "http://192.168.31.212:4000/" # the base hostname & protocol for your site
 
 all_categories: [
 ["dailywork", "日常事务","/posts/dailywork.html"],
@@ -28,5 +28,5 @@ collections:
   docs:
     output: true
 
-#gems:
-# - jekyll-paginate
+gems:
+ - jekyll-paginate
