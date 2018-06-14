@@ -19,8 +19,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://192.168.31.212:4000/" # the base hostname & protocol for your site
 
 all_categories: [
-["南宁生活小贴士", "南宁生活小贴士","/南宁生活小贴士.html"],
-["about", "关于","/about.html"]
+["南宁生活小贴士", "南宁生活小贴士","/pages/南宁生活小贴士.html"],
+["about", "关于","/pages/about.html"]
 ]
 paginate: 5
 paginate_path: "posts/page:num"
