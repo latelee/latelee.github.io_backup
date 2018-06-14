@@ -95,7 +95,33 @@ services:
 ```
 docker-compose up -d
 ```
+验证数据库表：
+```
+$ docker exec -it mysql bash
+bash-4.2# mysql -uroot -p123456
+mysql> use db_test;
+mysql> select * from user;
++----+----------------+------------+-----------+----------+
+| id | email          | first_name | last_name | username |
++----+----------------+------------+-----------+----------+
+|  0 | li@latelee.org | Late       | Lee       | latelee  |
++----+----------------+------------+-----------+----------+
+1 row in set (0.00 sec)
+```
 
+使用如下语句修改邮箱地址：
+```
+update user set email='cst@cststudio.com.cn' where username='latelee';
+```
+退出容器后，停止容器：
+```
+docker-compose down
+```
+再次重复上述命令启动、查看数据，可以看到邮件地址是最新的，从而验证了数据能永久存储。
 
 ## 实践指导
+.sql脚本只有第一次启动时创建（或说没有数据库时则会创建），已创建的，不会覆盖掉。
+
 在.sql脚本中，也可以创建账号、密码，这样就不用在docker-compose文件指定环境变量了。起到了一定的保护作用。
+
+如果要完全迁移数据，需要将数据目录（文中为mysql_data目录）与docker-compose.yml文件一起迁移。

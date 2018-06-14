@@ -5,20 +5,22 @@ kramdown:
 permalink: /posts/:title.html
 excerpt_separator: "<!-- more -->"
 
+title: 迟思堂工作室
+subtitle: 李迟的个人主页
 github: latelee
 author: "李迟"
 email: li@latelee.org
-name: "李迟的个人主页"
+
 sit_info: 宠辱不惊，看庭前花开花落；去留无意，望天空云卷云舒
 
 url: https://k.latelee.org
 
-#baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://192.168.31.212:4000/" # the base hostname & protocol for your site
 
 all_categories: [
-["about", "关于","/about.html"],
-#["resum", "简历","/resume.html"]
+["南宁生活小贴士", "南宁生活小贴士","/南宁生活小贴士.html"],
+["about", "关于","/about.html"]
 ]
 paginate: 5
 paginate_path: "posts/page:num"

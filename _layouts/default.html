@@ -4,9 +4,9 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="{{ page.title }} - {{ site.name }} - 作者:{{ site.author }}"/> 
+    <meta name="description" content="{{ site.title }} - {{ site.subtitle }} - 作者:{{ site.author }}"/> 
 	{% if page.tags.size > 0%}<meta name="keywords" content="{% for tag in page.tags %}{% if tag != "" %}{{ tag }}{% if forloop.index != page.tags.size %},{% endif %}{% endif %}{% endfor %}"/>{% endif %}
-    <title>{{ page.title }} - {{ site.name }}</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
@@ -46,7 +46,7 @@
             </span>
           </button>
           <a class="navbar-brand" href="/">
-            首页
+            {{ site.title }}
           </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,9 +75,6 @@
               {% include categories.html %} 
             </div>
             <!-- /.row -->
-          </div>
-          <!-- Side Widget Well -->
-          <div class="well-ad">
           </div>
 		  <!-- Blog Recent Well -->
           <div class="well">

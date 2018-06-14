@@ -4,8 +4,8 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="{{ page.title }} - {{ site.name }} - 作者:{{ site.author }}"/>
-    <title>{{ page.title }} - {{ site.name }}</title>
+    <meta name="description" content="{{ site.title }} - {{ site.subtitle }} - 作者:{{ site.author }}"/>
+    <title>{{ site.title }} - {{ site.subtitle }}</title>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
@@ -46,9 +46,11 @@
             <span class="icon-bar">
             </span>
           </button>
+          
           <a class="navbar-brand" href="/">
-            首页
+            {{ site.title }}
           </a>
+
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -76,10 +78,6 @@
               {% include categories.html %} 
             </div>
             <!-- /.row -->
-          </div>
-          <!-- Side Widget Well -->
-          <div class="well-ad">
-
           </div>
 		  <!-- Blog Recent Well -->
           <div class="well">
