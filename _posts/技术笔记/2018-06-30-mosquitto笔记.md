@@ -28,7 +28,9 @@ $ mosquitto_sub -v -t "hello"
 hello this is hello world  # 收到的消息
 ```
 -t: 订阅主题，此处为hello，只有发布的消息是hello主题才能接受到。如果希望订阅所有消息，使用“#”。
+
 -v: 打印订阅消息，包括主题和消息体。
+
 -d：如果希望看到更详细的调试信息，使用此选项。
 
 发布消息：
@@ -49,8 +51,11 @@ Client mosqpub/21072-u-master sending PUBLISH (d0, q0, r0, m1, 'hello', ... (19 
 Client mosqpub/21072-u-master sending DISCONNECT
 ```
 -d：打印详细的调试信息。
+
 -h: 指定要连接的MQTT服务器，此处为172.18.18.18。
+
 -t: 订阅主题，此处为hello。
+
 -m：消息体。
 
 ## 小结
