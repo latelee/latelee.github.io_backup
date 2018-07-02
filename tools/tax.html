@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>2018年未税改前个人所得税</title>
+<title>个人所得税计算</title>
 </head>
 
 <body>
@@ -140,20 +140,20 @@ var start = document.getElementById("qz2018").value;
 var tax = document.getElementById("gs2018");
 var r = document.getElementById("sh2018");
 var z = x - y - start;
-if(x<= 1500) r.innerHTML="您需要上的税0"
+if(z <= 0) r.innerHTML="您需要上的税0"
 else if (z<=3000){
 tax.innerHTML = (z*0.03-105);
 }else if (z<=12000){
 tax.innerHTML = (z*0.10-210); // ???
 }else if (z<=25000){
-tax.innerHTML = (z*0.20-1005);
+tax.innerHTML = (z*0.20-1410);
 }else if (z<=35000){
-tax.innerHTML = (z*0.25-1005);
+tax.innerHTML = (z*0.25-2660);
 }else if (z<=55000){
-tax.innerHTML = (z*0.30-2755);
+tax.innerHTML = (z*0.30-4410);
 }else if (z<=80000){
-tax.innerHTML = (z*0.35-5505);
-}else tax.innerHTML = (z*0.45-13505);
+tax.innerHTML = (z*0.35-7160);
+}else tax.innerHTML = (z*0.45-15160);
 
 r.innerHTML = x - y - tax.innerHTML;
 }
