@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>2018年未税改前个人所得税</title>
+</head>
+
+<body>
+税前工资 &nbsp;&nbsp;<input type="text" placeholder="请输入您的工资" id="gz" /> <br>
+各项费用 &nbsp;&nbsp;<input type="text" placeholder="各项费用总额" id="kc" /> <br>
+起征点 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="起征点" id="qz" value="3500" /> <br>
+<input type="button" value="计算" onclick="grade()" />
+
+<br>
+<br>
+个税是： <span id="gs"></span>元  <br>
+税后收入是： <span id="sh"></span>元  <br>
+<script type="text/javascript">
+function grade() {
+var x = document.getElementById("gz").value;
+var y = document.getElementById("kc").value;
+var start = document.getElementById("qz").value;
+var tax = document.getElementById("gs");
+var r = document.getElementById("sh");
+var z = x - y - start;
+if (z<=1500){
+tax.innerHTML = z*0.03;
+}else if (z<=4500){
+tax.innerHTML = (z*0.10-105);
+}else if (z<=9000){
+tax.innerHTML = (z*0.20-555);
+}else if (z<=35000){
+tax.innerHTML = (z*0.25-1005);
+}else if (z<=55000){
+tax.innerHTML = (z*0.30-2755);
+}else if (z<=80000){
+tax.innerHTML = (z*0.35-5505);
+}else tax.innerHTML = (z*0.45-13505);
+
+r.innerHTML = x - y - tax.innerHTML;
+}
+</script>
+
+<div class="media-body">
+<p>征缴个人所得税的计算方法，个人所得税费用扣除标准原来是2000，十一届全国人大常委会第二十一次会议27日再次审议个人所得税法修正案草案，草案维持一审时“工资、薪金所得减除费用标准从2000元提高至3500元”的规定，同时将个人所得税第1级税率由5%修改为3%。使用超额累进税率的计算方法如下：</p>
+<p>缴税=全月应纳税所得额*税率-速算扣除数</p>
+<p>全月应纳税所得额=(应发工资-各项费用总额)-3500</p>
+<p>实发工资=应发工资-各项费用总额-缴税</p>
+</div>
+
+<table class="shuilv" cellspacing="0"> 
+	<caption>个人所得税税率表（一）</caption> 
+	<thead>
+		<tr> 
+			<th>级数</th> 
+			<th>应纳税所得额(含税)</th> 
+			<th>应纳税所得额(不含税)</th> 
+			<th>税率(%)</th> 
+			<th>速算扣除数</th> 
+		</tr> 
+	</thead>
+	<tbody>
+		<tr> 
+			<td class="jishu">1</td> 
+			<td class="shuiYes">不超过1,500元的部分</td> 
+			<td class="shuiNo">不超过1,455元的部分</td> 
+			<td class="taxRate">3</td> 
+			<td class="kcsText">0</td> 
+		</tr> 
+		<tr> 
+			<td class="jishu">2</td> 
+			<td class="shuiYes">超过1,500元至4,500元的部分</td> 
+			<td class="shuiNo">超过1,455元至4,155元的部分</td> 
+			<td class="taxRate">10</td> 
+			<td class="kcsText">105</td> 
+		</tr> 
+		<tr> 
+			<td class="jishu">3</td> 
+			<td class="shuiYes">超过4,500元至9,000元的部分</td> 
+			<td class="shuiNo">超过4,155元至7,755元的部分</td> 
+			<td class="taxRate">20</td> 
+			<td class="kcsText">555</td> 
+		</tr> 
+		<tr> 
+			<td class="jishu">4</td> 
+			<td class="shuiYes">超过9,000元至35,000元的部分</td> 
+			<td class="shuiNo">超过7,755元至27,255元的部分</td> 
+			<td class="taxRate">25</td> 
+			<td class="kcsText">1,005</td> 
+		</tr> 
+		<tr> 
+			<td class="jishu">5</td> 
+			<td class="shuiYes">超过35,000元至55,000元的部分</td> 
+			<td class="shuiNo">超过27,255元至41,255元的部分</td> 
+			<td class="taxRate">30</td> 
+			<td class="kcsText">2,755</td> 
+		</tr> 
+		<tr> 
+			<td class="jishu">6</td> 
+			<td class="shuiYes">超过55,000元至80,000元的部分</td> 
+			<td class="shuiNo">超过41,255元至57,505元的部分</td> 
+			<td class="taxRate">35</td> 
+			<td class="kcsText">5,505</td> 
+		</tr> 
+		<tr> 
+			<td class="jishu">7</td> 
+			<td class="shuiYes">超过80,000元的部分</td> 
+			<td class="shuiNo">超过57,505的部分</td> 
+			<td class="taxRate">45</td> 
+			<td class="kcsText">13,505</td> 
+		</tr> 
+	</tbody>
+</table> 
+<p>说明：</p>
+<p>1、本表含税级距中应纳税所得额，是指每月收入金额 - 各项社会保险金(五险一金) - 起征点3500元(外籍4800元)的余额。</p>
+<p>2、含税级距适用于由纳税人负担税款的工资、薪金所得；不含税级距适用于由他人(单位)代付税款的工资、薪金所得。</p>
+
+<br>
+<br>
+<br>
+<br>
+新版个税计算<br>
+税前工资 &nbsp;&nbsp;<input type="text" placeholder="请输入您的工资" id="gz2018" /> <br>
+各项费用 &nbsp;&nbsp;<input type="text" placeholder="各项费用总额" id="kc2018" /> <br>
+起征点 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="起征点" id="qz2018" value="5000" /> <br>
+<input type="button" value="计算" onclick="grade2018()" />
+
+
+<br>
+<br>
+个税是： <span id="gs2018"></span>元  <br>
+税后收入是： <span id="sh2018"></span>元  <br>
+<script type="text/javascript">
+// 速算扣除数是多少？没找到
+function grade2018() {
+var x = document.getElementById("gz2018").value;
+var y = document.getElementById("kc2018").value;
+var start = document.getElementById("qz2018").value;
+var tax = document.getElementById("gs2018");
+var r = document.getElementById("sh2018");
+var z = x - y - start;
+if(x<= 1500) r.innerHTML="您需要上的税0"
+else if (z<=3000){
+tax.innerHTML = (z*0.03-105);
+}else if (z<=12000){
+tax.innerHTML = (z*0.10-210); // ???
+}else if (z<=25000){
+tax.innerHTML = (z*0.20-1005);
+}else if (z<=35000){
+tax.innerHTML = (z*0.25-1005);
+}else if (z<=55000){
+tax.innerHTML = (z*0.30-2755);
+}else if (z<=80000){
+tax.innerHTML = (z*0.35-5505);
+}else tax.innerHTML = (z*0.45-13505);
+
+r.innerHTML = x - y - tax.innerHTML;
+}
+</script>
+
+</body>
+</html >

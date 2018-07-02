@@ -20,6 +20,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 all_categories: [
 ["南宁生活小贴士", "南宁生活小贴士","/pages/南宁生活小贴士.html"],
+["常用小工具", "常用小工具","/pages/常用小工具.html"],
 ["about", "关于","/pages/about.html"]
 ]
 paginate: 5
