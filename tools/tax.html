@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,7 +8,7 @@
 
 <body>
 税前工资 &nbsp;&nbsp;<input type="text" placeholder="请输入您的工资" id="gz" /> <br>
-各项费用 &nbsp;&nbsp;<input type="text" placeholder="各项费用总额" id="kc" /> <br>
+五险一金 &nbsp;&nbsp;<input type="text" placeholder="五险一金总额" id="kc" /> <br>
 起征点 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="起征点" id="qz" value="3500" /> <br>
 <input type="button" value="计算" onclick="grade()" />
 
@@ -24,7 +24,9 @@ var start = document.getElementById("qz").value;
 var tax = document.getElementById("gs");
 var r = document.getElementById("sh");
 var z = x - y - start;
-if (z<=1500){
+if (z<=0){
+tax.innerHTML=0;
+}else if (z<=1500){
 tax.innerHTML = z*0.03;
 }else if (z<=4500){
 tax.innerHTML = (z*0.10-105);
@@ -45,8 +47,8 @@ r.innerHTML = x - y - tax.innerHTML;
 <div class="media-body">
 <p>征缴个人所得税的计算方法，个人所得税费用扣除标准原来是2000，十一届全国人大常委会第二十一次会议27日再次审议个人所得税法修正案草案，草案维持一审时“工资、薪金所得减除费用标准从2000元提高至3500元”的规定，同时将个人所得税第1级税率由5%修改为3%。使用超额累进税率的计算方法如下：</p>
 <p>缴税=全月应纳税所得额*税率-速算扣除数</p>
-<p>全月应纳税所得额=(应发工资-各项费用总额)-3500</p>
-<p>实发工资=应发工资-各项费用总额-缴税</p>
+<p>全月应纳税所得额=(应发工资-五险一金总额)-3500</p>
+<p>实发工资=应发工资-五险一金总额-缴税</p>
 </div>
 
 <table class="shuilv" cellspacing="0"> 
@@ -122,7 +124,7 @@ r.innerHTML = x - y - tax.innerHTML;
 <br>
 新版个税计算<br>
 税前工资 &nbsp;&nbsp;<input type="text" placeholder="请输入您的工资" id="gz2018" /> <br>
-各项费用 &nbsp;&nbsp;<input type="text" placeholder="各项费用总额" id="kc2018" /> <br>
+五险一金 &nbsp;&nbsp;<input type="text" placeholder="五险一金总额" id="kc2018" /> <br>
 起征点 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="起征点" id="qz2018" value="5000" /> <br>
 <input type="button" value="计算" onclick="grade2018()" />
 
@@ -132,7 +134,6 @@ r.innerHTML = x - y - tax.innerHTML;
 个税是： <span id="gs2018"></span>元  <br>
 税后收入是： <span id="sh2018"></span>元  <br>
 <script type="text/javascript">
-// 速算扣除数是多少？没找到
 function grade2018() {
 var x = document.getElementById("gz2018").value;
 var y = document.getElementById("kc2018").value;
@@ -140,11 +141,13 @@ var start = document.getElementById("qz2018").value;
 var tax = document.getElementById("gs2018");
 var r = document.getElementById("sh2018");
 var z = x - y - start;
-if(z <= 0) r.innerHTML="您需要上的税0"
-else if (z<=3000){
-tax.innerHTML = (z*0.03-105);
+
+if(z <= 0) {
+tax.innerHTML=0;
+}else if (z<=3000){
+tax.innerHTML = (z*0.03-0);
 }else if (z<=12000){
-tax.innerHTML = (z*0.10-210); // ???
+tax.innerHTML = (z*0.10-210);
 }else if (z<=25000){
 tax.innerHTML = (z*0.20-1410);
 }else if (z<=35000){
