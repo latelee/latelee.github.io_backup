@@ -58,5 +58,21 @@ Client mosqpub/21072-u-master sending DISCONNECT
 
 -m：消息体。
 
+## 资料
+websocket连接测试页面：
+http://www.hivemq.com/demos/websocket-client/
+
+MQTT协议介绍：
+http://shaocheng.li/post/blog/2015-08-11
+
+MQTT测试页面：
+http://test.mosquitto.org/
+
+订阅所有消息：
+```
+mosquitto_sub -h test.mosquitto.org -t "#" -v
+```
+
+
 ## 小结
 MQTT协议目前还没有理解得很透，网上例子非常简单，感受不出其优势，但很多资料都说这个协议很好，暂时没有体会到。
