@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 
-category : linux系统
+category : 编译链接
 tags : [Makefile]
 ---
 以前写的Makefile，有一些地方不够人性化，头文件或源码文件比较多的情况，要手动输入很多个地方。这次参考了一些资料，完善一下。

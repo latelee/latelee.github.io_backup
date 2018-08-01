@@ -1,16 +1,3 @@
----
-layout: post
-title: 
-category : linux系统
-tags : [Makefile]
----
-上一文章的Makefile，存在一个比较大的问题，那就是生成可执行的二进制文件时，会链接所有的目标文件（.o文件），这样的后果是，二进制文件体积比较大，经过调查，发现静态链接可以解决此问题。
-<!-- more -->
-## Makefile内容
-在原来基础上，添加中间临时静态库libfoobar.a（编译规则为libtarget)，编译生成该库时，要将main.cpp（或包括main函数的文件）排除掉，否则统出错。接着将此静态库与main.o一起链接生成a.out。要特别注意的是，libfoobar.a必须在其它链接库前面，否则链接会报错。另外，由于libfoobar.a是临时使用的，最后会将其删除。
-
-Makefile完全内容如下：
-```
 # (C) Copyleft 2011 2012 2013 2014 2015 2016 2017 2018
 # Late Lee(li@latelee.org) from http://www.latelee.org
 # 
@@ -32,19 +19,6 @@ Makefile完全内容如下：
 #       2017-04-17 -s for .a/.so if no debug
 #       2017-05-05 Add V for verbose ouput
 ###############################################################################
-
-# !!!=== version information
-VER_MAJOR ?= 0
-VER_MINOR ?= 1
-# !!!=== version head file
-VER_FILE ?= inc/version.h
-
-# !!!=== release or not (R=1 means release)
-R ?= 0
-
-# !!!===
-# version script
-VER_SCRIPT ?= ./generate_version.sh
 
 # !!!=== cross compile...
 CROSS_COMPILE ?= 
@@ -154,11 +128,7 @@ endif
 # internal lib name, just ignore it
 libtarget=libfoobar.a
 
-all: $(VER_FILE) $(BUILD_DIR)$(target)
-
-$(VER_FILE): 
-	@echo "building version..."
-	@chmod +x $(VER_SCRIPT); sh $(VER_SCRIPT) $(VER_FILE) $(VER_MAJOR) $(VER_MINOR) $(R)
+all: $(BUILD_DIR)$(target)
 
 # generate target, we need main.o here
 $(BUILD_DIR)$(target): $(BUILD_DIR)$(libtarget) main.o
@@ -202,10 +172,3 @@ endif
 .PHONY: all clean
 
 -include $(DEPS)
-```
-## 小结
-经验实践，这个Makefile模板相对来说比较方便使用，修改的地方也不多。一个大工程，只需要一个Makefile，不用维护子Makefile，而且在生成可执行文件体积上有所兼顾。当然，诸如kernel、uboot这类项目，因为内含各种平台不同的代码，其复杂程度决定了无法用简单Makefile来编译。
-
-以上，详细参考https://github.com/latelee/Makefile_templet工程的mult_dir_project_new1目录。。
-
-李迟 2018.6.30

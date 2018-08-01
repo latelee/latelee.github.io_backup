@@ -26,9 +26,10 @@ layout: index
 <ul class="pagination">
   {% if paginator.previous_page > 1 %}
   <li>
+	<!-- 这里的地址与_config.yml中paginate_path一致 -->
     <a href="/posts/page{{ paginator.previous_page }}/index.html">&laquo; 上一页</a>
   </li>
-  {% else %}
+  {% else %} <!-- 如果是第一页，则说明应该链接到首页了 -->
   <li>
     <a href="/">&laquo; 上一页</a>
   </li>

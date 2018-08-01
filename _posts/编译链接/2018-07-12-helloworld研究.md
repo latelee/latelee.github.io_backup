@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 
-category : linux系统
+category : 编译链接
 tags : [linux]
 ---
 

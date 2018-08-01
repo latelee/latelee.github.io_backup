@@ -3,6 +3,8 @@ rouge: pygments
 kramdown:
   input: GFM
 permalink: /posts/:title.html
+
+# 文章摘要分隔符
 excerpt_separator: "<!-- more -->"
 
 title: 迟思堂工作室
@@ -13,19 +15,22 @@ email: li@latelee.org
 
 sit_info: 宠辱不惊，看庭前花开花落；去留无意，望天空云卷云舒
 
-url: https://k.latelee.org
+# 地址，根据实际情况写
+#url: https://k.latelee.org
 
-#baseurl: "/" # the subpath of your site, e.g. /blog
-#url: "http://192.168.31.212:4000/" # the base hostname & protocol for your site
+# 适用于本地搭建
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://192.168.31.212:4000" # the base hostname & protocol for your site
 
 all_categories: [
 ["南宁生活小贴士", "南宁生活小贴士","/pages/南宁生活小贴士.html"],
 ["常用小工具", "常用小工具","/pages/常用小工具.html"],
 ["about", "关于","/pages/about.html"]
 ]
+# 一个页面显示文件数量
 paginate: 5
 paginate_path: "posts/page:num"
-timezone: Asia/Shanghai
+timezone: Asia/Shanghai # 时区为东八区
 
 collections:
   docs:

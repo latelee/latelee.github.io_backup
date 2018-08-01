@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 
-category : linux系统
+category : 编译链接
 tags : [Makefile]
 ---
 许久以前，一直使用自己总结的Makefile模板，这个模板也是基于现有资料整理而成的。
