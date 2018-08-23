@@ -183,6 +183,11 @@ docker rmi $(docker images | grep latelee | awk '{print $3}')  # awk的作用是
 ```
 docker rmi $(docker images | grep none | awk '{print $3 }')
 ```
+删除所有被破坏的镜像（有点类似删除none的镜像）：
+```
+docker rmi $(docker images -f "dangling=true" -q)
+```
+注意：如果镜像有依赖关系，可能不会被删除。
 
 本文所有命令均已测试通过，但仅保证在发文之时或延后一段时间有效。但命令本质是一样的。
 
