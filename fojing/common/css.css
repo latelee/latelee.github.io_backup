@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+
+p {
+    /*background-image: url(../common/back.gif);*/
+	line-height:35px;
+	border-top: 1px  solid #C0DCC0;
+	text-indent: 2em;
+	padding-top:5px;
+	font-size:19px;
+	letter-spacing:1px;
+}
+
+pre {
+	color: black;
+	margin-bottom: 0px;
+    font-size: 11pt;
+    font-weight: light;
+}
+
+
+
+/*---------------*/
+/*八卦图*/
+.bagua {
+	float: left;
+	vertical-align: middle;
+	font-family: 宋体;
+    width: 24px;
+	letter-spacing:0px;
+	line-height: 7px;
+	text-indent: 0em;
+	font-size:8px;
+	background-color:yellow;
+	vertical-align: middle;
+}
+.guaImg {
+	margin-bottom:-3px;
+}
+.bagua3 {
+	vertical-align: top;
+	font-family: 宋体;
+    width: 18px;
+	letter-spacing:0px;
+	line-height: 6px;
+	text-indent: 0em;
+	font-size:6px;
+	background-color:yellow;
+	vertical-align: middle;
+	line-height:7px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.bagua6 {
+	vertical-align: middle;
+	font-family: 宋体;
+    width: 18px;
+	letter-spacing:0px;
+	line-height: 3px;
+	text-indent: 0em;
+	font-size:6px;
+	background-color:yellow;
+	vertical-align: middle;
+	line-height:3px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+}
+.bagua6p {
+	vertical-align: middle;
+	font-family: 宋体;
+    width: 24px;
+    height: 21px;
+	letter-spacing:0px;
+	line-height: 3px;
+	text-indent: 0em;
+	font-size:6px;
+	background-color:yellow;
+	vertical-align: middle;
+	line-height:3px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+}
+table {
+
+	font-weight: lighter;
+	line-height: 16pt;
+	font-size: 14pt;
+	color:#000000;
+}
+
+
+/*---------------*/
+/*书信*/
+.letter {
+    border:         7px double #8B6914;
+	box-shadow: 10px 10px 5px #dddddd;
+	margin: 10px auto;
+	padding:  10px 20px;
+	width:90%;
+}
+
+.letter_inner{
+height:20px
+}
+/*经文*/
+.jingwen {
+	color:          #333333;
+    border:         1px dashed #000000;
+    padding:        10px 15px;
+	margin:    10px auto;
+	line-height:150%;
+	font-family:KaiTi;
+	font-size: 22px;
+	background-color:#FAFAD2;
+	width:90%;
+}
+
+/*原文*/
+.yuan {
+	font-size: 13pt;
+	color:#996600;
+}
+/*译文*/
+.yiwen {
+	color:blue;
+}
+
+/*解读*/
+.jiedu {
+	color:DarkMagenta;
+}
+
+/*注释*/
+.comment {
+	color:gray;
+	font-size: 12pt;
+}
+
+/*引用*/
+.yinyong {
+	color:brown;
+}
+
+/*评析*/
+.pingxi {
+	color:green;
+}
+
+
+
+.clr1{color:#804040;}
+.clr2{color:green;}
+.clr3{color:Teal;}
+.clr4{color:Olive;}
+.clr5{color:#bb0202;}
+.clr6{color:red;}

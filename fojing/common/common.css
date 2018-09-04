@@ -1,0 +1,338 @@
+﻿@charset "utf-8";
+body {
+	margin-top:2px;
+	margin-bottom:10px;
+}
+acronym {color:red;}
+/*Logo部分▼*/
+.logo {
+	position:       relation;
+	float:          left;
+	width:          120px;
+	margin-top:     5px;
+}
+a.logo:visited{text-decoration:none; color: DarkSlateGray; cursor: hand;}
+
+.logo_main {
+	width:          100%;
+	padding-left:   5px;
+	padding-right:  5px;
+	text-align:     center;
+	font-weight:    bold;
+	height:         0px;
+	font-size:      20pt;
+	color:          red;
+	font-family:    楷体 ;
+	filter: dropshadow(color=gray,offx=3,offy=1,positive=2);
+}
+
+.logo_sub {
+	width:          100%;
+	padding-left:   5px;
+	padding-right:  5px;
+	text-align:     center;
+	height:         14px;
+	font-size:      12pt;
+	font-family:    Arial;
+	color:          blue;
+	filter: Glow(color=Wheat,strength=2);
+}
+/*Logo部分▲*/
+
+/*浮动菜单▼*/
+#float_menu {
+	position:       absolute;
+	font-size:      12pt;
+	left:           -40px;
+	width:          40px;
+	background:     #6B8E23;
+	color:          white;
+	line-height:    30px;
+	text-align:     center;
+	padding-top:    15px;
+	padding-bottom: 15px;
+}
+#float_menu a:link{text-decoration:none; color: white}
+#float_menu a:visited{text-decoration:none; color: white}
+#float_menu a:hover{text-decoration:none; color: red}
+#float_menu active{text-decoration:none; color: blue}
+/*浮动菜单▲*/
+
+/*菜单文字*/
+.top_bottom {
+	border-top:        solid 1px #000000;
+	border-bottom:     solid 1px #000000;
+}
+.head_td {
+    background-image:  url(menu_back.jpg);
+    background-repeat: repeat-x;
+	border-left:      solid 1px #000000;
+	border-right:      solid 1px #000000;
+	white-space:       nowrap;
+	text-align:        center;
+	font-size:         10pt;
+	line-height:       14px;
+	color:             Purple;
+	vertical-align:    middle;
+    padding-top:       5px;
+    background-position: center;
+}
+.head_td a:link{text-decoration:none; color: DarkSlateGray}
+.head_td a:visited{text-decoration:none; color: DarkSlateGray}
+.head_td a:hover{text-decoration:none; color: red}
+
+/*当前菜单 ▼*/
+.current_menu {
+    background-image:  url(../common/menu_current.jpg);
+    background-repeat: repeat-x;
+}
+
+/*大标题*/
+.title {
+	position:          relation;
+	height:            20px;
+	font-size:         18pt;
+	font-weight:       bold;
+	text-align:        center;
+	vertical-align:    middle;
+	padding:           4px;
+	color:             green;
+}
+
+/*大标题*/
+h1 {
+	position:          relation;
+	height-line:            20px;
+	font-size:         18pt;
+	font-weight:       bold;
+	text-align:        center;
+	padding:           4px;
+	color:             green;
+}
+
+/*二标题*/
+h2 {
+	font-size:         22px;
+	font-weight:       bold;
+	vertical-align:    middle;
+	padding:           10px 0;
+	margin-top:	20px;	
+	color:						 DarkBlue;
+	text-align:center;
+	background-color:#eee;
+	letter-spacing:4px;
+}
+
+/*三标题*/
+h3 {
+	font-size:         20px;
+	font-weight:       bold;
+	vertical-align:    middle;
+	padding:           5px;
+	margin:	10px auto;	
+	color:#804000;
+	text-align:center;
+	letter-spacing:2px;
+}
+
+/*4标题*/
+h4 {
+	font-size:         19px;
+	font-weight:       bold;
+	vertical-align:    middle;
+	padding:           5px;
+	margin:10px 0 0 30px;	
+	color: #00aa00;
+	letter-spacing:2px;
+}
+
+/*副标题*/
+.vice {
+	position:          relation;
+	height:            20px;
+	font-size:         12pt;
+	font-weight:       light;
+	text-align:        center;
+	vertical-align:    middle;
+	padding:           4px;
+	color:             DarkSlateGray;
+}
+
+/*小标题*/
+.item {
+	position:          relation;
+	height:            20px;
+	font-size:         14pt;
+	font-weight:       light;
+	text-align:        center;
+	vertical-align:    middle;
+	padding:           4px;
+	color:             blue;
+}
+
+/*作者*/
+.auther{
+	position:        relation;
+	height:          20px;
+	font-size:       10pt;
+	font-weight:     light;
+	text-align:      center;
+	vertical-align:  middle;
+	padding:         4px;
+	color:           brown;
+	
+}
+
+/*文章底部（左）*/
+.foot_key {
+	color:  green;
+	margin-left:15px;
+}
+
+/*文章底部（右）*/
+#foot_right {
+	position:       absolute;
+	right:          8em;
+}
+
+/* 主柜架 */
+.main {
+	font-size: 17px; 
+	line-height:38px;
+	padding:0 2.5em; 
+	width:85%;
+	margin:0 auto;
+	font-family: "Microsoft YaHei";
+}
+
+
+
+/*诗词*/
+.shici {
+	padding-left:4em;
+	text-indent: 0;
+	color: Teal;
+	line-height:28px;
+	font-size:22px;
+	background-image:none;
+	padding-top:10px;
+	font-family:Kaiti;
+}
+
+/*网页底部链接*/
+#f_link li {
+	display: inline;
+	margin: 2px 5px;
+	text-align: left;
+}
+
+/*索引页列表*/
+
+#table_con h2 {
+
+	height:            20px;
+	font-size:         20px;
+	font-weight:       light;
+	text-align:        center;
+	vertical-align:    middle;
+	padding:0;
+	color:             black;
+	margin:30px auto 0px auto;
+	display:block;
+	background:#E6E6D2;
+}
+
+#table_con table {
+	margin:            3px auto;
+
+}
+
+.center1{
+	text-align:center;
+}
+
+.foot_comm{
+	width:        100%;
+	color:        green;
+	line-height:  24px;
+	text-align:   center;
+	font-size:   14px;
+	margin:		20px auto;
+	padding:20px;
+	background-color:#f8f8f8;
+}
+
+table{border-collapse:collapse;}
+
+/*强调说明,在行中间，淡绿色，双引号内容*/
+.qiangdiao1{
+	color:#006400;
+	font-family:FangSong;
+	font-size:22px;
+}
+/*强调说明,在行首*/
+.qiangdiao2{
+	color:blue;
+	font-weight:bold;
+	font-family:kaiti;
+	font-size:22px;
+}
+
+/*强调说明,在行中间，鹅黄色*/
+.qiangdiao3{
+	color:#990000;
+	font-family:kaiti;
+	font-size: 21px;
+
+}
+
+/*红颜色*/
+.c_r1{color:#B22222;} /*firebrick*/
+.c_r2{color:#DC143C;} /*crimson*/
+.c_r3{color:#FF6347;} /*tomato*/
+.c_r4{color:#FF4500;} /*orangered*/
+.c_r5{color:#DB7093;} /*palevioletred*/
+
+/*蓝颜色*/
+.c_b1{color:#1E90FF;} /*dodgerblue*/
+.c_b2{color:#6495ED;} /*cornflowerblue*/
+.c_b3{color:#4682B4;} /*steelblue*/
+.c_b4{color:#5F9EA0;} /*cadetblue*/
+.c_b5{color:#6A5ACD;} /*slateblue*/
+
+/*绿颜色*/
+.c_g1{color:#32CD32;} /*limegreen*/
+.c_g2{color:#9ACD32;} /*yellowgreen*/
+.c_g3{color:#3CB371;} /*mediumseagreen*/
+.c_g4{color:#20B2AA;} /*lightseagreen*/
+.c_g5{color:#2E8B57;} /*seagreen*/
+.c_g6{color:#808000;} /*olive*/
+
+/*黄颜色*/
+.c_y1{color:#CCCC00;} /*Dark yellow1*/
+.c_y2{color:#999900;} /*Dark yellow2*/
+.c_y3{color:#666600;} /*Dark yellow3*/
+.c_y4{color:#FFFFE0;} /*lightyellow*/
+.c_y5{color:#FFFACD;} /*lemonchiffon*/
+
+
+/*经文标题*/
+.jw_title{
+margin:30px auto 10px;
+font-weight:bold;
+font-size:20px;
+text-align:center;
+}
+
+/*当前位置*/
+.loc{
+padding-left:10px;
+margin-left:10px;
+margin-top:5px;
+font-size:15px;	
+font-family:SimSun;
+border:1px solid #ccc;
+background-color:f9f9f9;
+}
+
+abbr{color:red;}
