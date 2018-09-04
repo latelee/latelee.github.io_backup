@@ -129,14 +129,16 @@ WARNING: Adding a user to the "docker" group will grant the ability to run
 $ docker ps
 Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.32/containers/json: dial unix /var/run/docker.sock: connect: permission denied
 ```
-这是因为普通用户权限不够造成的。先看一下出错信息/var/run/docker.sock文件的权限。
+这是因为普通用户权限不够造成的。先看一下出错信息`/var/run/docker.sock`文件的权限。
 ```
 $ ll /var/run/docker.sock
 srw-rw---- 1 root docker 0 Dec 23 15:12 /var/run/docker.sock=
 ```
 该文件权限为root，所属docker组。因此，解决方法是将普通用户添加到docker组，命令如下：
+```
 sudo gpasswd -a ${USER} docker
 sudo newgrp - docker
+```
 这样，在后续使用docker时，就不需要频繁切换到root用户了。
 
 李迟 2018.4.9
