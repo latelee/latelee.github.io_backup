@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* 背景页面 ▼*/
+body {
+    background:     DarkKhaki;
+    font-wieght:    lighter;
+    font-size:      9pt;
+    margin:     0px;
+	padding:0px;
+}
+
+.channel {
+	font-family:    华文新魏;
+	/*font-weight:    500;*/
+	font-size:      15pt;
+	padding-left:   10px;
+	padding-top:    3px;
+	margin-top:     3px;
+	margin-left:    7px;
+	margin-right:   7px;
+	height:         25px;
+	background:     Linen;
+    border:         1px solid #8FBC8F;
+}
+table{border-collapse:collapse;}
+.logo_text {
+	font-family:    隶书;
+	font-size:      12pt;
+	padding-left:   5px;
+	height:         20px;
+	overflow:       hidden;
+}
+
+caption {
+	font-family:    "Microsoft YaHei";
+	font-weight:    bold;
+    font-size:      17px;
+    color:		#222;
+	margin-top:18px;
+}
+
+/* 背景页面 ▲*/
+
+/* 主文字区 inset  groove  
+ridge  outset ▼*/
+.base_index {
+    background:          #fafafa;
+    width:               780px;
+    margin:          3px auto;
+    border-style:        solid;
+    border-top-color:    LightGrey ;
+    border-bottom-color: LightGrey ;
+    border-left-color:   #AAA699 ;
+    border-right-color:  #AAA699 ;
+    border-width:17px;
+    padding:5px;
+    
+}
+
+
+
+._base_index {
+    background:          #E6E6D2;
+    width:               780px;
+    margin-top:          3px;
+    border-style:        solid;
+    border-top-color:    LightGrey ;
+    border-bottom-color: LightGrey ;
+    border-left-color:   #AAA699 ;
+    border-right-color:  #AAA699 ;
+}
+/* 主文字区 ▲*/
+
+/*以下是主页专用*/
+/*专题框部分 ▼*/
+.block_st {
+	width:          365px;
+    float:          left;
+    border:         1px solid #8FBC8F;
+    margin:         4px;
+    padding:        6px;
+}
+
+/*专题框部分 ▲*/
+
+/*标题按钮 ▼*/
+.link {
+    width:          180px;
+    border-top:     1px solid #ccccff;
+    border-left:    1px solid #ccccff;
+    border-right:   2px solid #999966;
+    border-bottom:  2px solid #999966;
+    margin:         2px;
+    padding-top:    3px;
+    padding-bottom: 2px;
+    padding-left:   3px;
+    color:          white;
+    background:     RoyalBlue;
+    font-size:      11pt;
+
+}
+a.link:link{text-decoration:none; color: white;}
+a.link:visited{text-decoration:none; color: white;}
+/*标题按钮 ▲*/
+
+p {
+    font-style:     normal;
+    font-variant:   normal;
+    line-height:    18pt;
+    text-indent:    2em;
+    text-align:     left;
+    margin-top:     6px;
+    margin-bottom:  6px;
+    font-size:      11pt;
+}
+
+/*索引主表table*/
+.indextable {
+    font-wieght:    lighter;
+    font-size:      16px;
+    margin-top:     15px;
+    margin-bottom:  15px;
+    border-collapse:collapse;
+    line-height:200%;
+
+}
+
+.indextable a:link{text-decoration:none; }
+.indextable a:visited{text-decoration:none; color:#900;}
+.indextable a:hover{text-decoration:underline;color:green; }
+.indextable a:active{text-decoration:underline;color:#c03; }
+
+
+/*索引主表td*/
+.index_center_td {
+    text-align:    center;
+    height:        26px;
+	font-family:    Microsoft YaHei;
+}
+.index_left_td {
+    text-align:    left;
+    padding-left:  10px;
+    height:        26px;
+	font-family:    Microsoft YaHei;
+}
+
+
+
+/*书名介绍*/
+.indextdintr {
+    text-align:    left;
+	line-height:   26px;
+	padding:       5px 10px;
+	font-family:    "Microsoft YaHei";
+}
+
+.foot{
+	width:        980px;
+	color:        #333333;
+	line-height:  24px;
+	text-align:   center;
+	font-size:   14px;
+	margin:		10px auto;
+}
+
+/*只有一个网页的图书*/
+.s_page{
+	border:1px #666 solid; 
+	width:35%;
+	margin:30px auto;
+	text-align:center;
+	padding:10px;
+	font-size:20px;
+	font-family:    "Microsoft YaHei";
+}
+
+/*首页的一半排版*/
+.half1{
+	width:368px;
+	vertical-align:	top;
+	display:inline-block;
+	margin:0 0 0 7px;
+}
+
+
+
+	.menu1 li {
+	display: inline-block;
+	margin: 0 0 0 -7px ;
+	padding:4px 0px;
+	text-align: middle;
+	width:58;
+}
+
+/*索引页图书说明*/
+.bookintro{
+	margin:0 auto;
+	padding:5px;
+	border:1px solid black;
+	text-align:    left;
+	line-height:   24px;
+	
+}
+
+.dashed{border-bottom:1px dashed #990;}
+
+legend{text-align:center;font-size:16px;font-weight:bold;color:#050}
+fieldset{margin:20px;}
+
