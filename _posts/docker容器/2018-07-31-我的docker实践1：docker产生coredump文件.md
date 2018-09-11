@@ -10,23 +10,35 @@ tags : [docker]
 
 ## 操作
 先查看core大小：
+```
 $ ulimit -a | grep core
 core file size          (blocks, -c) 0
+```
 
 设置：
+```
 $ulimit -c unlimited
+```
 
 再查看：
+```
 $ ulimit -a | grep core
 core file size          (blocks, -c) unlimited
+```
 
 设置路径
+```
 $ sudo echo 'core.%t.%e.%p' | sudo tee /proc/sys/kernel/core_pattern
+```
 
 运行镜像：
+```
 docker run -v /home:/home  -it latelee/myserver bash
+```
 进入对应的程序目录：
+```
 # cd /home/latelee/docker/test/myserver/
+```
 
 运行有段错误的测试程序：
 ```
@@ -40,6 +52,22 @@ Segmentation fault (core dumped)
 Dockerfile  core.1535079291.myserver.11  entrypoint.sh  config.ini  myserver
 ```
 生成的coredump文件为`core.1535079291.myserver.11`
+
+## core设置永久生效
+编辑`/etc/security/limits.conf`文件，修改core相关的配置项，如下：
+
+```
+*               soft    core            unlimited
+root            hard    core            unlimited
+```
+
+编辑/etc/sysctl.conf文件，在文件最后添加：
+
+```
+kernel.core_pattern = core.%t.%e.%p
+```
+注：以上2个文件均需root权限打开。
+
 
 ## 小结
 0、程序必须使用-g编译，即程序是带有调试信息的，否则，即使有coredump，也看不出问题所在。  
