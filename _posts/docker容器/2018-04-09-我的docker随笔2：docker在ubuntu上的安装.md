@@ -139,6 +139,7 @@ srw-rw---- 1 root docker 0 Dec 23 15:12 /var/run/docker.sock=
 sudo gpasswd -a ${USER} docker
 sudo newgrp - docker
 ```
-这样，在后续使用docker时，就不需要频繁切换到root用户了。
+为了确保结果正常，最好重新登陆一次系统。  
+完成后，在后续使用docker时，就不需要频繁切换到root用户了。
 
 李迟 2018.4.9
