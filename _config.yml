@@ -16,14 +16,15 @@ email: li@latelee.org
 sit_info: 宠辱不惊，看庭前花开花落；去留无意，望天空云卷云舒
 
 url: https://k.latelee.org
-#url: https://k.latelee.org
 
+# 适用于本地搭建
 baseurl: "" # the subpath of your site, e.g. /blog
 
 
 all_categories: [
 ["南宁生活小贴士", "南宁生活小贴士","/pages/南宁生活小贴士.html"],
 ["常用小工具", "常用小工具","/pages/常用小工具.html"],
+["suosuo", "句摘录", "/pages/suosuo.html"],
 ["manual", "手册", "/manual/index.html"],
 ["fojing", "佛经", "/fojing/index.html"],
 ["about", "关于","/pages/about.html"]

@@ -163,14 +163,15 @@ docker load -i file.tar
 docker load –I ubuntu16.04_1017.tar
 导入之后，使用docker images可查看镜像信息。
 
-### 其它常用的命令
+### 清理镜像、容器、网络
+本节给出一些清理docker的命令。
 
 停止所有容器：
 ```
 docker stop $(docker ps -aq)
 
 ```
-删除所有容器(如果正在运行，则不会被删除)：
+删除所有容器(如果正在运行，则不会被删除，此命令可删除已停止的容器)：
 ```
 docker rm $(docker ps -aq)
 ```
@@ -183,12 +184,83 @@ docker rmi $(docker images | grep latelee | awk '{print $3}')  # awk的作用是
 ```
 docker rmi $(docker images | grep none | awk '{print $3 }')
 ```
-删除所有被破坏的镜像（有点类似删除none的镜像）：
+删除所有无法使用的镜像（有点类似删除none的镜像）：
 ```
-docker rmi $(docker images -f "dangling=true" -q)
+docker rmi $(docker images -q -f "dangling=true")
 ```
 注意：如果镜像有依赖关系，可能不会被删除。
 
+删除多余的存储卷：
+```
+docker volume rm $(docker volume ls -q -f dangling=true)
+```
+
+### 版本版本清理镜像、容器、网络
+删除所有已停止的容器：
+```
+docker container prune -f
+```
+
+删除所有无法使用的镜像（术语为dangling image，翻译为悬空镜像，即没有tag的镜像，无法正常使用，所以就变成悬空）：
+```
+docker image  prune -f
+```
+删除所有不再使用的镜像存储文件：
+```
+docker volume prune -f
+```
+
+清理网络命令如下，docker网络名不会占用磁盘空间，但会有iptables规则，不使用时建议删除：
+```
+docker network prune -f
+```
+
+如果嫌逐个删除麻烦，用以下命令删除所有对象：
+```
+$ docker system prune
+[提示如下]
+WARNING! This will remove:
+        - all stopped containers
+        - all volumes not used by at least one container
+        - all networks not used by at least one container
+        - all dangling images
+Are you sure you want to continue? [y/N] 
+```
+注意，在docker版本17.06.1之后，需要额外添加--volumes选项才能删除存储卷，如下：
+```
+docker system prune --volumes
+```
+
+清理实例：
+```
+$ docker system prune --volumes
+[提示信息]
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all volumes not used by at least one container
+        - all dangling images
+        - all build cache
+Are you sure you want to continue? [y/N] y [输入y]
+[输出信息]
+Deleted Containers:
+568c22b124f8f96231b76f9f8c14e277438eb0524fd377716e72319ec73996ba
+(很多的ID)
+
+Deleted Networks:
+harbor_harbor
+docker_gwbridge
+gitlabjenkins_mygitlab-jenkins-net
+
+Deleted Volumes:
+1f32f8ccf045f63cfcf13632af4099c924e9e493f80cd03d26720ad03566ad09
+8c43b463b2f808a065ec800bd8544efb00570243265a6376d0f49162938785f5
+(很多的ID)
+
+deleted: sha256:ee9b64246d7c23129f7620ffdd8478358e9d554469573ae6ad6b7eca43fcf610
+
+Total reclaimed space: 3.623GB [释放的空间]
+```
 本文所有命令均已测试通过，但仅保证在发文之时或延后一段时间有效。但命令本质是一样的。
 
 李迟 2018.7.3
