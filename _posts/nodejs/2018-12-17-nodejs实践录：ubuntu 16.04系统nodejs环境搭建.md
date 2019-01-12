@@ -2,10 +2,10 @@
 layout: post
 title: 
 keywords: 
-category: 技术笔记
-tags : [notes]
+category: nodejs
+tags : [nodejs]
 ---
-ubuntu 16.04 nodejs环境搭建
+本文讲述ubuntu 16.04 64bit系统中，nodejs环境的搭建。
 
 <!-- more -->
 
@@ -35,7 +35,5 @@ sudo npm config list
 sudo n stable
 sudo node -v
 ```
-
-
 
 ## 测试

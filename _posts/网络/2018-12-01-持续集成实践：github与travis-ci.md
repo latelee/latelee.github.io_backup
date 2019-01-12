@@ -2,8 +2,8 @@
 layout: post
 title: 
 keywords: 
-category: 技术笔记
-tags : [notes]
+category : 网络
+tags : [网络]
 ---
 我记录的一些redis使用笔记
 <!-- more -->
