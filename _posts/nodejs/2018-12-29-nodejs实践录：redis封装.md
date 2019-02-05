@@ -5,7 +5,7 @@ keywords:
 category: nodejs
 tags : [nodejs]
 ---
-本文讲述windows 10 64bit系统中，nodejs环境的搭建。
+nodejs中有现成的redis模块。
 
 <!-- more -->
 
