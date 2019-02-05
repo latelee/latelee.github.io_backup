@@ -13,7 +13,6 @@ tags : [nodejs]
 笔者在linux、windows都安装了nodejs，还安装了pm2。在windows平台，使用cmd终端或git bash运行node或npm命令。但更多时候是使用vs code的终端，因为可以一边编写代码，一边跑程序，非常方便。  
 下面是笔者vs code截图：  
 ![](https://raw.githubusercontent.com/latelee/latelee.github.io/master/assets/nodejs/nodejs-workshop.png)  
-
 ## 编码风格
 nodejs使用的是java风格，不过笔者从事c/c++开发很多年，已经固化了一些风格，特别是大括号`{}`和`if..else..`的位置。曾与同事讨论多回，也尝试向标准的js靠拢，但发现编码效率很低。于是决定改回原来的风格。简述如下：  
 * 大括号：单独一行
